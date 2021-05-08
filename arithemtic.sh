@@ -1,5 +1,7 @@
 #! /bin/bash -x
 
+declare -A sorting 
+
 echo "welcome to the arithimetic computation problems"
 
 read -p "enter the value of a: " a
@@ -18,3 +20,6 @@ echo $result3
 
 result4=$(echo $a $b $c | awk '{print $a%$b+$c}')
 echo $result4
+
+sorting=( [0]=$result [1]=$result2 [3]=$result3 [4]=$result4 )
+	echo "${sorting[@]}"
