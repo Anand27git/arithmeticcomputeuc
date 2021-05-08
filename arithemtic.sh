@@ -9,3 +9,6 @@ echo $a $b $c
 
 result=$(echo $a $b $c | awk '{print $1+$2*$3}')
 echo $result
+
+result2=$(echo $a $b $c | awk '{print $a*$b+$c}')
+echo $result2
