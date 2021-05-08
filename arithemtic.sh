@@ -12,3 +12,6 @@ echo $result
 
 result2=$(echo $a $b $c | awk '{print $a*$b+$c}')
 echo $result2
+
+result3=$(echo $a $b $c | awk '{print $c+$a/$b}')
+echo $result3
