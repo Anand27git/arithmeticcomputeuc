@@ -1,6 +1,6 @@
 #! /bin/bash -x
 
-declare -A sorting 
+declare -A  sorting 
 
 echo "welcome to the arithimetic computation problems"
 
@@ -24,6 +24,25 @@ echo $result4
 sorting=( [0]=$result [1]=$result2 [3]=$result3 [4]=$result4 )
 	echo "${sorting[@]}"
 
-store=(${sorting[@]})
+store=(${sorting[@]}) 
 
 echo "array value :${store[@]}"
+
+echo "array in original order"
+echo ${store[*]}
+
+for ((i = 0; i<4; i++))
+do
+for((j=0; j<4-i-1; j++))
+do
+ 	if [ ${store[j]} -gt ${store[$((j+1))]} ]
+	then 
+	#swap
+	temp=${store[j]}
+	store[$j]=${store[$((j+1))]}
+	store[$((j+1))]=$temp
+	fi
+	done
+done
+echo "array in sorted order:"
+echo ${store[*]}
