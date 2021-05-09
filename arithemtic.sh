@@ -23,3 +23,7 @@ echo $result4
 
 sorting=( [0]=$result [1]=$result2 [3]=$result3 [4]=$result4 )
 	echo "${sorting[@]}"
+
+store=(${sorting[@]})
+
+echo "array value :${store[@]}"
