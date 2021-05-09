@@ -44,5 +44,5 @@ do
 	fi
 	done
 done
-echo "array in sorted order:"
+echo "array in ascending order:"
 echo ${store[*]}
